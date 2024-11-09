@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot de Estádios com Mapa</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="map"></div>
+        <div id="chat-container">
+            <h1 id="title">Assistente de Estádios</h1>
+            <div id="chat-box"></div>
+            <div id="user-input-container">
+                <input id="user-input" type="text" placeholder="Digite sua cidade ou UF...">
+                <button id="send-button">Enviar</button>
+            </div>
+            <h3 id="footer">By Eduardo Longo & Henrique Andrade</h3>
+        </div>
+    </div>
+    <script src="chatbot.js"></script>
+</body>
+</html>

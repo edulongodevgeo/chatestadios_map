@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Garantir que a altura ocupe 100% da tela */
+    overflow: hidden; /* Impede a rolagem do body */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo preto suave */
+    color: #1db954; /* Verde estilo Spotify */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dois lados ocupando 50% cada */
+    width: 100vw;
+    height: 100vh;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    background-color: #333; /* Fundo preto suave para o mapa */
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #181818; /* Fundo preto estilo Spotify */
+    padding: 20px;
+    height: 100%; /* Garante que o chat ocupe toda a altura */
+    overflow: hidden; /* Impede a rolagem no container */
+}
+
+#chat-box {
+    flex-grow: 1;  /* Ocupa o espaço restante dentro de #chat-container */
+    overflow-y: auto;  /* Adiciona rolagem vertical quando o conteúdo for maior que o espaço disponível */
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #282828;
+    border-radius: 5px;
+    max-height: calc(100vh - 160px); /* Ajuste a altura máxima do chat para garantir que ele não ultrapasse a tela */
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-line;
+}
+
+.user {
+    background-color: #1db954; /* Verde para mensagens do usuário */
+    color: #fff;
+    text-align: right;
+}
+
+.bot {
+    background-color: #333; /* Cinza para mensagens do bot */
+    color: #fff;
+    text-align: left;
+}
+
+#user-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #282828;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#send-button {
+    background-color: #1db954;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#send-button:hover {
+    background-color: #1ed760;
+}
+
+#title {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e elegante */
+    font-size: 2em; /* Tamanho maior para o título */
+    color: #1db954; /* Verde estilo Spotify */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaçamento entre título e chat */
+}
+
+#footer {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e elegante */
+    font-size: 1em; /* Tamanho da fonte menor que o título */
+    color: #fff; /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o rodapé */
+    margin-top: 20px; /* Espaçamento entre o chat e o rodapé */
+}
